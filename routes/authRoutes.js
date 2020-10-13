@@ -13,7 +13,12 @@ module.exports = (app) => {
         res.send(req.user);
         // res.send(req.sessio);
     });
-    
+
+
+    app.get("/a", (req, res) =>{
+       
+        res.send({hi:"ANDES"});
+    });
 
     app.get("/api/logout", (req, res) =>{
         req.logout();
