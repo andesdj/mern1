@@ -25,6 +25,8 @@ mongoose.connect(keys.mongoURI);
 require("./routes/authRoutes")(app);
 
 const PORT = process.env.PORT || 5000;
-app.listen(process.env.PORT || 5000, function() {
-    console.log("listening on port: " + PORT);
+console.log(process.env.PORT);
+//app.listen(PORT);
+app.listen(process.env.PORT || PORT, function() {
+    console.log("---------------Port Listening  " + PORT);
 });
